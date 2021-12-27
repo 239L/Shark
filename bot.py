@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from dotenv import load_dotenv
+
 import os
 import re
 import discord
@@ -9,10 +9,7 @@ from discord import utils
 import random
 from datetime import datetime
 
-
-load_dotenv()
-
-token = os.getenv('TOKEN')
+token = os.environ['TOKEN']
 
 client = commands.Bot(command_prefix=".")
 
