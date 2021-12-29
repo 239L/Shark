@@ -59,7 +59,9 @@ async def on_message(msg):
         await msg.channel.send(embed=embed)
 
     message=msg.content.lower()
-    
+    troll=re.compile("(^не хочу)|(^я не хочу)|(^ну я не хочу)")
+    if troll.match(message):
+        await msg.channel.send("ну ты щас, конечно, кринжанулся <:shark1:924014769743220756>")
     text = re.compile("da+$|да+$|дa+$|dа+$")
     da=re.compile("da+[%&',;=)(}\[/\]/{?$\":./\-/+\\//]+$|дa+[%&',;=)(}\[/\]/{?$\":./\-/+\\//]+$")
     da2=re.compile("d+\s+a+$|д+\s+a+$")
