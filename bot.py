@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 
 import os
 import re
@@ -60,7 +60,7 @@ async def on_message(msg):
 
     message=msg.content.lower()
     troll=re.compile("(^не хочу)|(^я не хочу)|(^ну я не хочу)")
-    if troll.match(message):
+    if troll.match(message) and secs>30:
         await msg.channel.send("ну ты щас, конечно, кринжанулся <:shark1:924014769743220756>")
     text = re.compile("da+$|да+$|дa+$|dа+$")
     da=re.compile("da+[%&',;=)(}\[/\]/{?$\":./\-/+\\//]+$|дa+[%&',;=)(}\[/\]/{?$\":./\-/+\\//]+$")
