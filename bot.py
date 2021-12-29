@@ -21,9 +21,9 @@ async def on_message(msg):
     mins = now.minute
     secs=now.second
     hours=now.hour
-    if (mins == 34 and (secs == 34 or secs==1 or secs==59)) or ((secs==10 or secs==45 or secs==1) and (mins==15 or mins==58 or hours==16)) or (hours==23 and mins==15 and (secs==20 and secs==44) ) and not msg.author.bot:
+    if (mins == 34 and (secs == 34 or secs==1 or secs==59)) or ((secs==10 or secs==45 or secs==1) and (mins==15 and hours==16)) or (hours==23 and mins==15 and (secs==20 and secs==44) ) and not msg.author.bot:
         await msg.channel.send("<a:bananan:890261338780233758> не мешайте мне дрочить!")
-
+    
     if msg.content.startswith(".shoot") or msg.content.startswith(".grab") or msg.content.startswith(".eat") or msg.content.startswith(".bb") or msg.content.startswith(".бб") or msg.content.startswith(".съем") or msg.content.startswith(".take"):
         await msg.delete()
     list = []
@@ -59,6 +59,8 @@ async def on_message(msg):
         await msg.channel.send(embed=embed)
 
     message=msg.content.lower()
+    if (secs<=10&&(message.content.startswith("не хочу") or message.content.endswith("а я не хочу") or message.content.startswith("я не хочу"))):
+        await msg.channel.send("ну ты щас, конечно, кринжанулся <:shark1:924014769743220756>")
     text = re.compile("da+$|да+$|дa+$|dа+$")
     da=re.compile("da+[%&',;=)(}\[/\]/{?$\":./\-/+\\//]+$|дa+[%&',;=)(}\[/\]/{?$\":./\-/+\\//]+$")
     da2=re.compile("d+\s+a+$|д+\s+a+$")
