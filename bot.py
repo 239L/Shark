@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 
 import os
 import re
@@ -59,7 +59,7 @@ async def on_message(msg):
         await msg.channel.send(embed=embed)
 
     message=msg.content.lower()
-    if (secs<=10&&(message.content.startswith("не хочу") or message.content.endswith("а я не хочу") or message.content.startswith("я не хочу"))):
+    if (message.content.startswith("не хочу") or message.content.endswith("а я не хочу") or message.content.startswith("я не хочу")):
         await msg.channel.send("ну ты щас, конечно, кринжанулся <:shark1:924014769743220756>")
     text = re.compile("da+$|да+$|дa+$|dа+$")
     da=re.compile("da+[%&',;=)(}\[/\]/{?$\":./\-/+\\//]+$|дa+[%&',;=)(}\[/\]/{?$\":./\-/+\\//]+$")
