@@ -114,7 +114,7 @@ class switch(object):
 async def grab(ctx):
     for case in switch(random.randint(1, 4)):
         if case(1):
-            await ctx.send("<:handrev:897143171899850822><:catxok:924017382589100062><:hand1:897142817846087701>")
+            await ctx.send("<:handrev:897143171899850822><:dio:924015554505900053><:hand1:897142817846087701>")
             break
         if case(2):
             await ctx.send("<:handrev:897143171899850822><a:frok:924017176216739900><:hand1:897142817846087701>")
