@@ -67,7 +67,7 @@ async def on_message(msg):
     da2=re.compile("d+\s+a+$|д+\s+a+$")
     if (text.search(message) or da.search(message) or da2.search(message)) and not msg.author.bot:
 
-        await msg.channel.send("пизда <:moai:875355368623046667>")
+        await msg.channel.send("пизда <:square:875709692104564806>")
     text2=re.compile("н+е+т+$")
     if text2.search(msg.content) and not msg.author.bot:
         await msg.channel.send("пидора ответ <:moairev:875357014350512168>")
@@ -82,6 +82,15 @@ async def on_message(msg):
                 break
     await client.process_commands(msg)
 
+@client.command(name='fap', aliases=['дрочу'])
+async def fap(ctx, emoji:str):
+    for e in client.guilds:
+        try:
+            em = utils.get(e.emojis, name=emoji)
+            if em:
+                await ctx.send(str(em)+"\n<a:bananan:890261338780233758>")
+        except Exception as e:
+            await ctx.send("The emote doesn't exist in the pool")
 
 @client.command(name='ok', aliases=['ок', 'к', 'k', 'kk'])
 async def ok(ctx):
